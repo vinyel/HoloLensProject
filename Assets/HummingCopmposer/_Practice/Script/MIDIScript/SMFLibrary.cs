@@ -78,7 +78,7 @@ namespace SMFLibrary {
         // バイナリファイルを読み込み、配列で返す
         private byte[] _load_binary(string filename) {
             //System.IO.FileStream fs = new System.IO.FileStream(@filename, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-            System.IO.FileStream fs = new System.IO.FileStream(Application.dataPath + "/MIDIData/" + filename, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+            System.IO.FileStream fs = new System.IO.FileStream(Application.streamingAssetsPath + "/MIDIData/" + filename, System.IO.FileMode.Open, System.IO.FileAccess.Read);
             int filesize = (int)fs.Length;
             byte[] data = new byte[filesize];
             fs.Read(data, 0, filesize);
