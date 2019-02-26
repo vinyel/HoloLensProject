@@ -5,9 +5,10 @@ using UnityEngine;
 //https://unity3d.com/jp/learn/tutorials/topics/scripting/enabling-and-disabling-components
 
 public class StickOperater: MonoBehaviour {
+
     GameObject stick;
     private ChaseObject isPlay;
-    public static bool isPause;
+    public bool isPause;
 	// Use this for initialization
 	void Start () {
         stick = GameObject.Find("Stick");
@@ -29,4 +30,5 @@ public class StickOperater: MonoBehaviour {
             isPause = !isPause;
         }
     }
+
 }

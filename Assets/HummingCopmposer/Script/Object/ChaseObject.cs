@@ -64,12 +64,12 @@ public class ChaseObject : MonoBehaviour {
 
     void Update() {
         //ポーズ状態なら
-        if (StickOperater.isPause) {
+        if (ExampleInputter_PlayStop.isPause) {
             pauseTime += Time.deltaTime;
         }
 
         //ポーズ状態でないなら
-        else if (!StickOperater.isPause) {
+        else if (!ExampleInputter_PlayStop.isPause) {
             //区間の開始位置を出発してからの経過時間
             //---var diff = Time.timeSinceLevelLoad - startTime;
             var diff = Time.realtimeSinceStartup - pauseTime - startTime;
