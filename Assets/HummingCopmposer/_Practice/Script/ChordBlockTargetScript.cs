@@ -13,6 +13,9 @@ public class ChordBlockTargetScript : MonoBehaviour {
     [SerializeField, Range(1, 16)]
     int sepNum = 2;
 
+    [SerializeField]
+    GameObject targetCube;
+
     float cubeAngleY;
 
     // Use this for initialization
@@ -39,7 +42,14 @@ public class ChordBlockTargetScript : MonoBehaviour {
             i = 1;
 
             while ( i <= sepNum ) {
-                GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                GameObject cube2 = Instantiate(targetCube, this.transform.position, Quaternion.identity);
+                //GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube2.name = "cube" + c + i;
+                //当たり判定用のrigidbodyを取り付け
+                //cube2.gameObject.AddComponent<Rigidbody>();
+                //cube2.GetComponent<Rigidbody>().useGravity = false;
+                //cube2.GetComponent<BoxCollider>().isTrigger = true;
+
                 cube2.transform.position = new Vector3((goList[c].transform.position.x - ((posX[0] / sepNum) / 2) * ( 1 + 2 * ( i - 1 ))),
                     1.5f,
                     (goList[c].transform.position.z - ((posZ[0] / sepNum) / 2) * (1 + 2 * (i - 1)))
@@ -70,7 +80,9 @@ public class ChordBlockTargetScript : MonoBehaviour {
             i = 1;
 
             while (i <= sepNum) {
-                GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                GameObject cube2 = Instantiate(targetCube, this.transform.position, Quaternion.identity);
+                //GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube2.name = "cube" + c + i;
                 cube2.transform.position = new Vector3((goList[c].transform.position.x - ((posX[0] / sepNum) / 2) * (1 + 2 * (i - 1))),
                     1.5f,
                     (goList[c].transform.position.z - ((posZ[0] / sepNum) / 2) * (1 + 2 * (i - 1)))

@@ -6,7 +6,7 @@ using HoloToolkit.Unity.InputModule;
 public class ExampleInputter_PlayStop : MonoBehaviour, IInputClickHandler {
     bool isRunning = false;
     float lastClick = 0f;
-    float interval = 0.2f;
+    float interval = 0.3f;
 
     int num = 0;
     int rnum = 0;
@@ -44,7 +44,7 @@ public class ExampleInputter_PlayStop : MonoBehaviour, IInputClickHandler {
         if (isRunning)
             yield break;
         isRunning = true;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         Debug.Log(num);
         rnum = num;
         num = 0;
