@@ -13,13 +13,15 @@ public class ChordBlockAttacher : MonoBehaviour {
 	void Update () {
 		
 	}
+    
     private void OnTriggerStay(Collider other) {
-        Debug.Log("Hit"); // ログを表示する
-        //rigid.velocity = Vector3.zero;
-        //rigid.angularVelocity = Vector3.zero;
-        other.transform.rotation = this.transform.rotation;
-        other.transform.position = this.transform.position;
-        
+        if ( other.tag == "TargetChordBlock" ) {
+            Debug.Log("Hit"); // ログを表示する
+                              //rigid.velocity = Vector3.zero;
+                              //rigid.angularVelocity = Vector3.zero;
+            other.transform.rotation = this.transform.rotation;
+            other.transform.position = this.transform.position;
+        }
     }
 
 }
