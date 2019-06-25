@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TargetChordBlock
+  - SingleBlock
   layers:
   - Default
   - TransparentFX
