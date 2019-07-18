@@ -7,6 +7,7 @@ public class ChordBlockAttacher : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody>();
+        this.transform.rotation = Quaternion.Euler(-90, 0, 0);
     }
 	
 	// Update is called once per frame
