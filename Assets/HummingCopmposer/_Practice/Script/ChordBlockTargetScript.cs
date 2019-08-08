@@ -17,6 +17,7 @@ public class ChordBlockTargetScript : MonoBehaviour {
     GameObject targetCube;
 
     float cubeAngleY;
+    float cubeAngleX;
 
     // Use this for initialization
     void Start () {
@@ -51,22 +52,23 @@ public class ChordBlockTargetScript : MonoBehaviour {
                 //cube2.GetComponent<BoxCollider>().isTrigger = true;
 
                 cube2.transform.position = new Vector3((goList[c].transform.position.x - ((posX[0] / sepNum) / 2) * ( 1 + 2 * ( i - 1 ))),
-                    1.5f,
+                    1.42f,
                     (goList[c].transform.position.z - ((posZ[0] / sepNum) / 2) * (1 + 2 * (i - 1)))
                     );
 
 
                 cube2.gameObject.transform.localScale = new Vector3(
-                    cube2.gameObject.transform.localScale.x * 0.007f,
-                    cube2.gameObject.transform.localScale.y * 0.007f,
-                    cube2.gameObject.transform.localScale.z * 0.007f);
+                    cube2.gameObject.transform.localScale.x * 0.01f,
+                    cube2.gameObject.transform.localScale.y * 0.01f,
+                    cube2.gameObject.transform.localScale.z * 0.01f);
 
                 cube2.transform.parent = go.transform;
                 i++;
                 
                 cubeAngleY = 5.625f * tmp;
                 //Debug.Log(hummingBlockAngleY);
-                cube2.transform.Rotate(new Vector3(0, cubeAngleY, 0));
+                cubeAngleX = -90;
+                cube2.transform.Rotate(new Vector3(cubeAngleX, cubeAngleY, 0));
 
             }
             c++;
@@ -84,22 +86,23 @@ public class ChordBlockTargetScript : MonoBehaviour {
                 //GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube2.name = "cube" + c + i;
                 cube2.transform.position = new Vector3((goList[c].transform.position.x - ((posX[0] / sepNum) / 2) * (1 + 2 * (i - 1))),
-                    1.5f,
+                    1.42f,
                     (goList[c].transform.position.z - ((posZ[0] / sepNum) / 2) * (1 + 2 * (i - 1)))
                     );
 
 
                 cube2.gameObject.transform.localScale = new Vector3(
-                    cube2.gameObject.transform.localScale.x * 0.007f,
-                    cube2.gameObject.transform.localScale.y * 0.007f,
-                    cube2.gameObject.transform.localScale.z * 0.007f);
+                    cube2.gameObject.transform.localScale.x * 0.01f,
+                    cube2.gameObject.transform.localScale.y * 0.01f,
+                    cube2.gameObject.transform.localScale.z * 0.01f);
 
                 cube2.transform.parent = go.transform;
                 i++;
 
                 cubeAngleY = 5.625f * tmp;
                 //Debug.Log(hummingBlockAngleY);
-                cube2.transform.Rotate(new Vector3(0, cubeAngleY, 0));
+                cubeAngleX = -90;
+                cube2.transform.Rotate(new Vector3(cubeAngleX, cubeAngleY, 0));
 
             }
             tmp += 2;

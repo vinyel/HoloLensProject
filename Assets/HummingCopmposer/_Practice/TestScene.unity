@@ -22194,7 +22194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sepNum: 4
-  targetCube: {fileID: 1447841641547226, guid: 5248f6bb5196e514dac10ddc9de313f9, type: 2}
+  targetCube: {fileID: 1668554516139976, guid: 8577ca8c88efd3e4488f09510e2db616, type: 2}
 --- !u!114 &522726325
 MonoBehaviour:
   m_ObjectHideFlags: 0
