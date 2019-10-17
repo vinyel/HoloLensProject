@@ -19,7 +19,7 @@ public class ChordBlockAttacher : MonoBehaviour {
     
     private void OnTriggerStay(Collider other) {
         if ( other.tag == "TargetChordBlock" ) {
-            //Debug.Log("Hit"); // ログを表示する
+            Debug.Log("Hit"); // ログを表示する
                               //rigid.velocity = Vector3.zero;
                               //rigid.angularVelocity = Vector3.zero;
             other.transform.rotation = this.transform.rotation;

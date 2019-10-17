@@ -64,7 +64,9 @@ namespace HoloToolkit.Unity.InputModule
         private IInputSource currentInputSource;
         private uint currentInputSourceId;
         private Rigidbody hostRigidbody;
+        //private Rigidbody _hostRigidbody;//
         private bool hostRigidbodyWasKinematic;
+        //private bool _hostRigidbodyWasKinematic;//
 
         private void Start()
         {
@@ -123,6 +125,13 @@ namespace HoloToolkit.Unity.InputModule
             {
                 hostRigidbodyWasKinematic = hostRigidbody.isKinematic;
                 hostRigidbody.isKinematic = true;
+                /*
+                if (hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody != null) {
+                    _hostRigidbody = hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody;
+                    _hostRigidbodyWasKinematic = hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody.isKinematic;
+                    hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody.isKinematic = true;
+                }
+                */
             }
 
             Transform cameraTransform = CameraCache.Main.transform;
@@ -303,6 +312,11 @@ namespace HoloToolkit.Unity.InputModule
             {
                 hostRigidbody.isKinematic = hostRigidbodyWasKinematic;
             }
+            /*
+            if (_hostRigidbody != null) {
+                _hostRigidbody.isKinematic = _hostRigidbodyWasKinematic;
+            }
+            */
             StoppedDragging.RaiseEvent();
         }
 
