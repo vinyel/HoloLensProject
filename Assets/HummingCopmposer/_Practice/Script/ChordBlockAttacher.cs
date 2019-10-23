@@ -32,7 +32,7 @@ public class ChordBlockAttacher : MonoBehaviour {
             fj.breakForce = 3;
             fj.breakTorque = 3;
             fj.connectedBody = other.transform.root.GetComponent<Rigidbody>();
-
+            fj.connectedMassScale = 1.5f;
         }
     }
     private void OnTriggerExit(Collider other) {
