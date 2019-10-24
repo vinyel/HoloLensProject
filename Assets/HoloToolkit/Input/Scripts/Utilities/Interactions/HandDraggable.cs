@@ -50,7 +50,7 @@ namespace HoloToolkit.Unity.InputModule
         public bool IsDraggingEnabled = true;
 
         private bool isDragging;
-        public static bool _isDragging;
+        public static bool _isDragging; ////
         private bool isGazed;
         private Vector3 objRefForward;
         private Vector3 objRefUp;
@@ -68,6 +68,8 @@ namespace HoloToolkit.Unity.InputModule
         //private Rigidbody _hostRigidbody;//
         private bool hostRigidbodyWasKinematic;
         //private bool _hostRigidbodyWasKinematic;//
+
+        public static Rigidbody draggingRigid; ///
 
         private void Start()
         {
@@ -128,6 +130,8 @@ namespace HoloToolkit.Unity.InputModule
             {
                 hostRigidbodyWasKinematic = hostRigidbody.isKinematic;
                 hostRigidbody.isKinematic = true;
+
+                draggingRigid = hostRigidbody; //
                 /*
                 if (hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody != null) {
                     _hostRigidbody = hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody;
@@ -315,6 +319,7 @@ namespace HoloToolkit.Unity.InputModule
             if (hostRigidbody != null)
             {
                 hostRigidbody.isKinematic = hostRigidbodyWasKinematic;
+                draggingRigid = null; //
             }
             /*
             if (_hostRigidbody != null) {

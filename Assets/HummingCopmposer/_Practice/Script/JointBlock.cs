@@ -34,11 +34,10 @@ public class JointBlock : MonoBehaviour {
             fj.breakTorque = 300;
             fj.connectedBody = _otherParent.GetComponent<Rigidbody>();
             //fj.enableCollision = true;
-            //fj.enablePreprocessing = false;
+            fj.enablePreprocessing = true;
             //fj.connectedMassScale = 10;
-            fj.massScale = 1.5f;
+            fj.massScale = 1.77f;
             //fj.autoConfigureConnectedAnchor = false;
-            
             Debug.Log("aiu");
         }
         
@@ -46,6 +45,7 @@ public class JointBlock : MonoBehaviour {
     
     private void OnTriggerExit(Collider other) {
         if ( fj != null ) {
+
             Destroy(this.GetComponent<FixedJoint>());
             Destroy(fj);
         }
