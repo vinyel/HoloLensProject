@@ -9,11 +9,15 @@ public class ChordBlockPresenter : MonoBehaviour
     public ChordBlockModel _chordBlockModel;
     public ChordBlockView _chordBlockView;
 
+    public GameObject _convex;
     public GameObject _concave;
+
+    public GameObject _convexSideBlock;
     
 	// Use this for initialization
 	void Start ()
     {
+        // 持ってるブロックの凹が他のブロックの凸に近づいたときの処理
         _concave.OnTriggerEnterAsObservable()
             .Where(col => col.name == "Convex" && _chordBlockModel.Fj == null)
             .Subscribe(col => JointBlock(col));
@@ -23,6 +27,18 @@ public class ChordBlockPresenter : MonoBehaviour
             {
                 Destroy(this.GetComponent<FixedJoint>());
                 Destroy(_chordBlockModel.Fj);
+            });
+        // 凸側にくっついた他のブロックを検知して代入
+        _convex.OnTriggerEnterAsObservable()
+            .Where(col => col.name == "Concave")
+            .Subscribe(col =>
+            {
+                _convexSideBlock = col.transform.root.gameObject;
+            });
+        _convex.OnTriggerExitAsObservable()
+            .Subscribe(_ =>
+            {
+                _convexSideBlock = null;
             });
     }
 

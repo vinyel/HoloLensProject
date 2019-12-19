@@ -57300,7 +57300,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chordBlockModel: {fileID: 1421277646}
   _chordBlockView: {fileID: 1421277644}
+  _convex: {fileID: 1626547351}
   _concave: {fileID: 969764011}
+  _convexSideBlock: {fileID: 0}
 --- !u!114 &1421277646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68148,7 +68150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chordBlockModel: {fileID: 1855709950}
   _chordBlockView: {fileID: 1855709947}
+  _convex: {fileID: 2097898399}
   _concave: {fileID: 157242920}
+  _convexSideBlock: {fileID: 0}
 --- !u!1 &1868699431
 GameObject:
   m_ObjectHideFlags: 0
@@ -70240,7 +70244,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chordBlockModel: {fileID: 1941307101}
   _chordBlockView: {fileID: 1941307098}
+  _convex: {fileID: 2146902584}
   _concave: {fileID: 274394542}
+  _convexSideBlock: {fileID: 0}
 --- !u!114 &1941307101
 MonoBehaviour:
   m_ObjectHideFlags: 0

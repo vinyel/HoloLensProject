@@ -28,13 +28,21 @@ public class ChordBlockModel : MonoBehaviour
 		set { _fj = value; }
 	}
 
-	// 下側にくっついているブロック
+	// 下側（凹）にくっついているブロック
 	private GameObject _concaveSideBlock;
 
 	public GameObject ConcaveSideBlock
 	{
 		get { return _concaveSideBlock; }
 		set { _concaveSideBlock = value;  }
+	}
+	// 上側（凸）にくっついているブロック
+	private GameObject _convexSideBlock;
+
+	public GameObject ConvexSideBlock
+	{
+		get { return _convexSideBlock; }
+		set { _convexSideBlock = value; }
 	}
 
 	// Use this for initialization
