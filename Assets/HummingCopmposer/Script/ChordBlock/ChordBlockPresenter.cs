@@ -19,7 +19,9 @@ public class ChordBlockPresenter : MonoBehaviour
     {
         // 持ってるブロックの凹が他のブロックの凸に近づいたときの処理
         _concave.OnTriggerEnterAsObservable()
-            .Where(col => col.name == "Convex" && _chordBlockModel.Fj == null)
+            .Where(col => col.name == "Convex" 
+                          && _chordBlockModel.Fj == null 
+                                               && col.transform.root.gameObject.GetComponent<ChordBlockPresenter>()._convexSideBlock == null)
             .Subscribe(col => JointBlock(col));
         _concave.OnTriggerExitAsObservable()
             .Where(_ => _chordBlockModel.Fj != null)
