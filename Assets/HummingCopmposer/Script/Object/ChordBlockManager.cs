@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+/// <summary>
+/// 単音ブロックの振舞い
+/// </summary>
 public class ChordBlockManager : MonoBehaviour {
     private Rigidbody dr;
     List<Rigidbody> listAb;

@@ -50,7 +50,6 @@ namespace HoloToolkit.Unity.InputModule
         public bool IsDraggingEnabled = true;
 
         private bool isDragging;
-        public static bool _isDragging; ////
         private bool isGazed;
         private Vector3 objRefForward;
         private Vector3 objRefUp;
@@ -69,8 +68,12 @@ namespace HoloToolkit.Unity.InputModule
         private bool hostRigidbodyWasKinematic;
         //private bool _hostRigidbodyWasKinematic;//
 
+        /// <summary>
+        /// システム用のスタティックフィールド
+        /// </summary>
         public static Rigidbody draggingRigid; ///
-
+        public static bool _isDragging; ////
+        
         private void Start()
         {
             if (HostTransform == null)

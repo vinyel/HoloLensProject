@@ -6,6 +6,11 @@ public class JointBlock : MonoBehaviour {
     GameObject _parent;
     GameObject _otherParent;
     FixedJoint fj;
+
+    private GameObject _concaveSideBlock;
+
+    public GameObject ConcaveSideBlock => _concaveSideBlock;
+
     // Use this for initialization
     void Start () {
 		
@@ -17,15 +22,22 @@ public class JointBlock : MonoBehaviour {
 
         //}
 	}
+    
+    /// <summary>
+    /// 凹が近づいてきたら凸をくっつけに行く
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Convex" && fj == null) {
             _parent = transform.root.gameObject;
             _otherParent = other.transform.root.gameObject;
+
+            _concaveSideBlock = _otherParent;
+            
             //_parent.transform.rotation = Quaternion.Euler(0, 0, 0);
             for (int i = 0; i < 1000; i++) {
                 _otherParent.transform.position = _parent.transform.position - new Vector3(0, 0.02f, 0);
                 _otherParent.transform.rotation = _parent.transform.rotation;
-                
             }
 
             _parent.AddComponent<FixedJoint>();
@@ -39,6 +51,11 @@ public class JointBlock : MonoBehaviour {
             fj.massScale = 1.77f;
             //fj.autoConfigureConnectedAnchor = false;
             Debug.Log("aiu");
+            for (int i = 0; i < 1000; i++) {
+                _otherParent.transform.position = _parent.transform.position - new Vector3(0, 0.02f, 0);
+                _otherParent.transform.rotation = _parent.transform.rotation;
+
+            }
         }
         
     }
