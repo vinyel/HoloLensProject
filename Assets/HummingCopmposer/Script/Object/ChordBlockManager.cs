@@ -21,20 +21,22 @@ public class ChordBlockManager : MonoBehaviour {
             .Where(xs => Input.GetKeyDown(KeyCode.N)
                          && HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid != null)
             .Subscribe(_ => Debug.Log(DetectTopBlock(HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject)));
+        this.UpdateAsObservable()
+            .Select(_ => Input.inputString)
+            .Where(xs => Input.GetKeyDown(KeyCode.V)
+                         && HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid != null)
+            .Subscribe(_ =>
+            {
+                listAb = new List<Rigidbody>();
+                dr = DetectTopBlock(HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject).GetComponent<Rigidbody>();
+            
+                listAb.Add(dr);
+                DetectAllBlocks();
+                Spawn();
+            });
     }
 	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.V) && HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid != null) {
-            listAb = new List<Rigidbody>();
-            dr = HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid;
-            
-            listAb.Add(dr);
-            DetectAttachedBlocks();
-            Spawn();
-        }
-	}
-    void DetectAttachedBlocks() {
+    void DetectAllBlocks() {
         if (dr.GetComponent<FixedJoint>() != null) {
             rb = dr.GetComponent<FixedJoint>().connectedBody;
             listAb.Add(rb);
