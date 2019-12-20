@@ -79,7 +79,6 @@ namespace HoloToolkit.Unity.InputModule
             if (HostTransform == null)
             {
                 HostTransform = transform;
-                //HostTransform.rotation = Quaternion.Euler(0, 0, HostTransform.rotation.z);  /////////
             }
 
             hostRigidbody = HostTransform.GetComponent<Rigidbody>();

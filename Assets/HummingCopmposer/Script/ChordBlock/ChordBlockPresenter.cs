@@ -17,11 +17,24 @@ public class ChordBlockPresenter : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+
+        // 凸側にくっついた他のブロックを検知して代入
+        _convex.OnTriggerEnterAsObservable()
+            .Where(col => col.name == "Concave")
+            .Subscribe(col =>
+            {
+                _convexSideBlock = col.transform.parent.gameObject;
+            });
+        _convex.OnTriggerExitAsObservable()
+            .Subscribe(_ =>
+            {
+                _convexSideBlock = null;
+            });
         // 持ってるブロックの凹が他のブロックの凸に近づいたときの処理
         _concave.OnTriggerEnterAsObservable()
             .Where(col => col.name == "Convex" 
                           && _chordBlockModel.Fj == null 
-                                               && col.transform.root.gameObject.GetComponent<ChordBlockPresenter>()._convexSideBlock == null)
+                          )//&& col.transform.root.gameObject.GetComponent<ChordBlockPresenter>()._convexSideBlock == null)
             .Subscribe(col => JointBlock(col));
         _concave.OnTriggerExitAsObservable()
             .Where(_ => _chordBlockModel.Fj != null)
@@ -29,18 +42,6 @@ public class ChordBlockPresenter : MonoBehaviour
             {
                 Destroy(this.GetComponent<FixedJoint>());
                 Destroy(_chordBlockModel.Fj);
-            });
-        // 凸側にくっついた他のブロックを検知して代入
-        _convex.OnTriggerEnterAsObservable()
-            .Where(col => col.name == "Concave")
-            .Subscribe(col =>
-            {
-                _convexSideBlock = col.transform.root.gameObject;
-            });
-        _convex.OnTriggerExitAsObservable()
-            .Subscribe(_ =>
-            {
-                _convexSideBlock = null;
             });
     }
 
@@ -51,7 +52,7 @@ public class ChordBlockPresenter : MonoBehaviour
     private void JointBlock(Collider other)
     {
         _chordBlockModel.Parent = this.gameObject;
-        _chordBlockModel.OtherParent = other.transform.root.gameObject;
+        _chordBlockModel.OtherParent = other.transform.parent.gameObject;
         _chordBlockModel.ConcaveSideBlock = _chordBlockModel.OtherParent;
         
         for (int i = 0; i < 1000; i++) {
@@ -65,7 +66,7 @@ public class ChordBlockPresenter : MonoBehaviour
         _chordBlockModel.Fj.connectedBody = _chordBlockModel.OtherParent.GetComponent<Rigidbody>();
         _chordBlockModel.Fj.enablePreprocessing = true;
         
-        _chordBlockModel.Fj.massScale = 1.77f;
+        _chordBlockModel.Fj.massScale = 1.9f;
         Debug.Log("aiu");
         
         for (int i = 0; i < 1000; i++) {
