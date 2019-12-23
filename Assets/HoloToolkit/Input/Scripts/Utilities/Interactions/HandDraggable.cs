@@ -64,9 +64,9 @@ namespace HoloToolkit.Unity.InputModule
         private IInputSource currentInputSource;
         private uint currentInputSourceId;
         private Rigidbody hostRigidbody;
-        //private Rigidbody _hostRigidbody;//
+        private Rigidbody _hostRigidbody;//
         private bool hostRigidbodyWasKinematic;
-        //private bool _hostRigidbodyWasKinematic;//
+        private bool _hostRigidbodyWasKinematic;//
 
         /// <summary>
         /// システム用のスタティックフィールド
@@ -82,6 +82,7 @@ namespace HoloToolkit.Unity.InputModule
             }
 
             hostRigidbody = HostTransform.GetComponent<Rigidbody>();
+            _hostRigidbody = HostTransform.GetComponent<Rigidbody>();
         }
 
         private void OnDestroy()
@@ -135,7 +136,7 @@ namespace HoloToolkit.Unity.InputModule
 
                 draggingRigid = hostRigidbody; //
                 /*
-                if (hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody != null) {
+                if (hostRigidbody.gameObject.GetComponent<FixedJoint>() != null && hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody != null) {
                     _hostRigidbody = hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody;
                     _hostRigidbodyWasKinematic = hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody.isKinematic;
                     hostRigidbody.gameObject.GetComponent<FixedJoint>().connectedBody.isKinematic = true;

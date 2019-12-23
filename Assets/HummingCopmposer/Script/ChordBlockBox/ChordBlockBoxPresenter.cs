@@ -16,9 +16,9 @@ public class ChordBlockBoxPresenter : MonoBehaviour
 	void Awake()
 	{
 		this.UpdateAsObservable()
-			.Select(_ => Input.inputString)
-			.Where(xs => Input.GetKey(KeyCode.K))
-			.Subscribe(__ => AngleSubscriber());
+			.Where(_ => HoloToolkit.Unity.InputModule.HandDraggable._isDragging == true
+			            && HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject.name == this.name)
+			.Subscribe(_ => AngleSubscriber());
 		model.Angle.Subscribe(value => { view.RotateBox(model.AngleMax, value); });
 	}
 
