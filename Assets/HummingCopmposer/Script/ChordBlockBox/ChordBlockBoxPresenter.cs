@@ -18,13 +18,22 @@ public class ChordBlockBoxPresenter : MonoBehaviour
 		this.UpdateAsObservable()
 			.Where(_ => HoloToolkit.Unity.InputModule.HandDraggable._isDragging == true
 			            && HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject.name == this.name)
-			.Subscribe(_ => AngleSubscriber());
+			.Subscribe(_ =>
+			{
+				AngleSubscriber();
+			});
+		this.UpdateAsObservable()
+			.Where(_ => HoloToolkit.Unity.InputModule.HandDraggable._isDragging == false)
+			.Subscribe(_ =>
+			{
+				view.Initialize();
+			});
 		model.Angle.Subscribe(value => { view.RotateBox(model.AngleMax, value); });
 	}
 
 	private void AngleSubscriber()
 	{
-		model.Angle.Value = 10f * Time.deltaTime;
+		model.Angle.Value = 5f * Time.deltaTime;
 	}
 
 }
