@@ -11,8 +11,12 @@ public class ExampleInputter_PlayStop : MonoBehaviour, IInputClickHandler {
     int num = 0;
     int rnum = 0;
     
+    /// <summary>
+    /// HoloLens用のメソッド、マウスも可
+    /// マウスを使用したサンプルシーン内ではスペースキーを押しながら
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnInputClicked(InputClickedEventData eventData) {
-        
         if ((lastClick + interval) > Time.time) {
             num = 2;
         }
@@ -21,7 +25,7 @@ public class ExampleInputter_PlayStop : MonoBehaviour, IInputClickHandler {
         }
         lastClick = Time.time;
     }
-     
+    
     GameObject stick;
     private ChaseObject isPlay;
     public  static bool isPause;
@@ -36,7 +40,6 @@ public class ExampleInputter_PlayStop : MonoBehaviour, IInputClickHandler {
     void Update() {
         if ( num != 0 ) {
             StartCoroutine(HoldSphere());
-            //Debug.Log(rnum);
         }
     }
 
@@ -45,7 +48,7 @@ public class ExampleInputter_PlayStop : MonoBehaviour, IInputClickHandler {
             yield break;
         isRunning = true;
         yield return new WaitForSeconds(0.3f);
-        Debug.Log(num);
+        //Debug.Log(num);
         rnum = num;
         num = 0;
         if (rnum == 2) {

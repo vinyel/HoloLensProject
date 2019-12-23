@@ -13,12 +13,10 @@ public class ChordBlockPresenter : MonoBehaviour
     public GameObject _concave;
 
     public GameObject _convexSideBlock;
-    
-	// Use this for initialization
+    // Use this for initialization
 	void Start ()
     {
-
-        // 凸側にくっついた他のブロックを検知して代入
+        // 凸側にくっついた他のブロックを検知して代入。fixedjointで凹側にくっついたブロックは分かるが、凸側がわからなかったため
         _convex.OnTriggerEnterAsObservable()
             .Where(col => col.name == "Concave")
             .Subscribe(col =>
