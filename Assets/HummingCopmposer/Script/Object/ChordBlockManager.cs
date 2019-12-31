@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UniRx;
 using UniRx.Triggers;
+using UnityEngine.UI;
 using UnityEngine.Windows.Speech;
 
 /// <summary>
@@ -14,6 +15,8 @@ public class ChordBlockManager : MonoBehaviour {
     List<Rigidbody> listAb;
     private Rigidbody rb;
 
+    public Text voiceText;
+    
     // Use this for initialization
     void Start ()
     {
@@ -22,7 +25,7 @@ public class ChordBlockManager : MonoBehaviour {
         dictationRecognizer.DictationResult += (text, config) => 
         {
             // 認識結果
-            Debug.Log(text);
+            voiceText.text = text;
             if (HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid != null && text == "コピー")
             {
                 listAb = new List<Rigidbody>();
