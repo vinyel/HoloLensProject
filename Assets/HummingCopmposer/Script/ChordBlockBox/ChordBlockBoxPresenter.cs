@@ -17,7 +17,7 @@ public class ChordBlockBoxPresenter : MonoBehaviour
 	{
 		this.UpdateAsObservable()
 			.Where(_ => HoloToolkit.Unity.InputModule.HandDraggable._isDragging == true
-			            && HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject.name == this.name)
+			            && HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.tag == "BlockBox")
 			.Subscribe(_ =>
 			{
 				AngleSubscriber();

@@ -15,8 +15,6 @@ public class ChordBlockManager : MonoBehaviour {
     List<Rigidbody> listAb;
     private Rigidbody rb;
 
-    public Text voiceText;
-    
     // Use this for initialization
     void Start ()
     {
@@ -25,8 +23,7 @@ public class ChordBlockManager : MonoBehaviour {
         dictationRecognizer.DictationResult += (text, config) => 
         {
             // 認識結果
-            voiceText.text = text;
-            if (HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid != null && text == "コピー")
+            if (HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.tag == "TargetChordBlock")
             {
                 listAb = new List<Rigidbody>();
                 dr = DetectTopBlock(HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject).GetComponent<Rigidbody>();
