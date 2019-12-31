@@ -15,15 +15,18 @@ public class ChordBlockManager : MonoBehaviour {
     List<Rigidbody> listAb;
     private Rigidbody rb;
 
+    public TextMesh tm;
+    
     // Use this for initialization
     void Start ()
     {
         // 音声認識「コピー」でブロックをコピーする
         var dictationRecognizer = new DictationRecognizer();
-        dictationRecognizer.DictationResult += (text, config) => 
+        dictationRecognizer.DictationResult += (text, config) =>
         {
+            tm.text = text;
             // 認識結果
-            if (HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.tag == "TargetChordBlock")
+            if (HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.tag == "TargetChordBlock" && text == "コピー")
             {
                 listAb = new List<Rigidbody>();
                 dr = DetectTopBlock(HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject).GetComponent<Rigidbody>();
@@ -31,8 +34,6 @@ public class ChordBlockManager : MonoBehaviour {
                 listAb.Add(dr);
                 DetectAllBlocks();
                 Spawn();
-                
-                Debug.Log("コピー成功");
             }
         };
         dictationRecognizer.DictationComplete += (config) => { dictationRecognizer.Start(); };

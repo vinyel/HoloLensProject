@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TargetChordBlock
   - SingleBlock
+  - BlockBox
   layers:
   - Default
   - TransparentFX
