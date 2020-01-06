@@ -40593,7 +40593,7 @@ TextMesh:
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190335
 --- !u!23 &1024464846
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44818,6 +44818,10 @@ Prefab:
     - target: {fileID: 100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
       propertyPath: m_TagString
       value: TargetChordBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
@@ -51467,6 +51471,10 @@ Prefab:
     - target: {fileID: 100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
       propertyPath: m_TagString
       value: TargetChordBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
@@ -64639,6 +64647,10 @@ Prefab:
     - target: {fileID: 100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
       propertyPath: m_TagString
       value: TargetChordBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6db9c8b22b5c5240a63f421eab7a46d, type: 3}
