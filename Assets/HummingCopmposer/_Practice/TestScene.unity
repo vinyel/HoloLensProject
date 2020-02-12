@@ -1411,6 +1411,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 11676450}
   view: {fileID: 11676452}
+  _droppedBlock: {fileID: 1108619050590080, guid: 362416b725edb564a97a8283b5dbe1e7,
+    type: 2}
 --- !u!114 &11676452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31417,7 +31419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0359b64641956458b695fd6d266aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 2.67
+  time: 4
   endPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
 --- !u!54 &847969148
@@ -31456,7 +31458,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7, y: 1, z: 1}
+  m_Size: {x: 20, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &847969151
 MeshRenderer:

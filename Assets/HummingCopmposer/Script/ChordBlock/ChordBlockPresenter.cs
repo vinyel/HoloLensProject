@@ -65,7 +65,6 @@ public class ChordBlockPresenter : MonoBehaviour
         _chordBlockModel.Fj.enablePreprocessing = true;
         
         _chordBlockModel.Fj.massScale = 1.9f;
-        Debug.Log("aiu");
         
         for (int i = 0; i < 1000; i++) {
             _chordBlockModel.OtherParent.transform.position = _chordBlockModel.Parent.transform.position - new Vector3(0, 0.02f, 0);
