@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HoloToolkit.Unity.InputModule;
 
-public class AudioScript : MonoBehaviour {
+public class AudioScript : MonoBehaviour, IInputClickHandler {
     private AudioSource sound;
 	// Use this for initialization
 	void Start () {
@@ -33,5 +34,10 @@ public class AudioScript : MonoBehaviour {
             PlaySound();
             //Debug.Log(this.gameObject.name);
         }
+    }
+
+    public void OnInputClicked(InputClickedEventData eventData)
+    {
+        PlaySound();
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 using System.Linq;
 using UniRx;
 using UniRx.Triggers;
+using UnityEngine.UI;
+using UnityEngine.Windows.Speech;
 
 /// <summary>
 /// 単音ブロックの振舞い
@@ -13,9 +15,30 @@ public class ChordBlockManager : MonoBehaviour {
     List<Rigidbody> listAb;
     private Rigidbody rb;
 
+    public TextMesh tm;
+    
     // Use this for initialization
     void Start ()
     {
+        // 音声認識「コピー」でブロックをコピーする
+        var dictationRecognizer = new DictationRecognizer();
+        dictationRecognizer.DictationResult += (text, config) =>
+        {
+            tm.text = text;
+            // 認識結果
+            if (HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.tag == "TargetChordBlock" && text == "コピー")
+            {
+                listAb = new List<Rigidbody>();
+                dr = DetectTopBlock(HoloToolkit.Unity.InputModule.HandDraggable.draggingRigid.gameObject).GetComponent<Rigidbody>();
+            
+                listAb.Add(dr);
+                DetectAllBlocks();
+                Spawn();
+            }
+        };
+        dictationRecognizer.DictationComplete += (config) => { dictationRecognizer.Start(); };
+        dictationRecognizer.Start();
+        
         this.UpdateAsObservable()
             .Select(_ => Input.inputString)
             .Where(xs => Input.GetKeyDown(KeyCode.N)
