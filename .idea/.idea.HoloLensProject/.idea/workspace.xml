@@ -13,53 +13,53 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/UniRx/Scripts/InternalUtil/ExceptionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/InputSources/InteractionInputSource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/UX/Scripts/Buttons/Button.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/MIDIScript/PracticeDynamicHummingBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/MR/Example/Scripts/ExampleInputter_PlayStop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Audio/AudioScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/MIDIScript/SMFLibrary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Audio/StickOperater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Utilities/Scripts/DebugPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/ButtonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Common/Scripts/Extensions/ActionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/UX/Scripts/BoundingBoxes/BoundingBoxGizmoHandle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3EFC9AC0-0C85-4654-A5A8-EFD575CAD0AF/27/2e50c839/MaterialPropertyBlock.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Managers/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Object/ChaseObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Object/ChordBlockManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTriggerTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3EFC9AC0-0C85-4654-A5A8-EFD575CAD0AF/5c/c0f4dc19/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/UX/Scripts/KeyboardKeyFunc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Object/DragObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/UX/Shaders/HUXButtonHighlightShader.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Managers/MixedRealityTeleport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/TwoHandScaleLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/UX/Scripts/Receivers/InteractionReceiver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/TwoHandRotateLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/DebugInteractionSourceState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/InputHandlers/IInputClickHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/GamePad/XboxController/XboxControllerHandlerBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/TwoHandManipulatable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/UX/Scripts/KeyboardInputField.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/CustomInputSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/ChordBlockAttacher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/CustomInputControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlock/ChordBlockView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/TwoHandMoveLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3EFC9AC0-0C85-4654-A5A8-EFD575CAD0AF/3d/8d5fae76/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlock/ChordBlockPresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/HandDraggable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Focus/SimpleSinglePointerSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlock/ChordBlockModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/AxisController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/InputSources/IInputSource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/TestSystemController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/MeshScriptv01.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/JointBlock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/InputSources/InteractionInputSource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/MIDIScript/PracticeDynamicHummingBlock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Audio/AudioScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/_Practice/Script/MIDIScript/SMFLibrary.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Audio/StickOperater.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Utilities/Scripts/DebugPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3EFC9AC0-0C85-4654-A5A8-EFD575CAD0AF/27/2e50c839/MaterialPropertyBlock.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Object/ChaseObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Object/ChordBlockManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3EFC9AC0-0C85-4654-A5A8-EFD575CAD0AF/5c/c0f4dc19/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxPresenter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/Object/DragObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/UX/Scripts/Receivers/InteractionReceiver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/InputHandlers/IInputClickHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/GamePad/XboxController/XboxControllerHandlerBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlock/ChordBlockView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3EFC9AC0-0C85-4654-A5A8-EFD575CAD0AF/3d/8d5fae76/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlock/ChordBlockPresenter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlock/ChordBlockModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HoloToolkit/Input/Scripts/Utilities/AxisController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,8 +79,8 @@
         <option value="$PROJECT_DIR$/Assets/HummingCopmposer/TakeApartBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/HummingCopmposer/BlockBoxDropBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlock/ChordBlockPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/HummingCopmposer/Script/ChordBlockBox/ChordBlockBoxPresenter.cs" />
       </list>
     </option>
   </component>
@@ -143,6 +143,7 @@
       <workItem from="1581406776350" duration="8747000" />
       <workItem from="1581417589806" duration="2891000" />
       <workItem from="1581490447179" duration="2847000" />
+      <workItem from="1581931833114" duration="310000" />
     </task>
     <servers />
   </component>
